@@ -2,11 +2,22 @@
     <span>Login</span>
     <div>
         <span>User Name</span>
-        <input type="text">
+        <input type="text" [(ngModel)]="userName">
+        <ng-container *ngIf="emptyUserName">
+            <div>Please enter a user name.</div>
+        </ng-container>
     </div>
     <div>
         <span>Password</span>
-        <input type="password">
+        <input type="password" 
+        [(ngModel)]="password">
+        <ng-container>
+            <div *ngIf="emptyPassword">Please enter a password.</div>
+        </ng-container>
     </div>
-    <prc-button [buttonText]="loginButtonText"></prc-button>
+    <prc-button 
+        color="primary"
+        [buttonText]="loginButtonText"
+        (click)="submitLogin()">
+    </prc-button>
 </div>

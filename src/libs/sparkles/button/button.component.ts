@@ -22,6 +22,7 @@ export class ButtonComponent extends MatButton implements OnInit  {
    }
 
   ngOnInit(): void {
+  
   }
 
 }
